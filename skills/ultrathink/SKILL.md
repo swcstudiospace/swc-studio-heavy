@@ -2,6 +2,7 @@
 name: ultrathink
 description: Single Grok App slash command. Runs Prompt Uplift, Graph of Thought, and per-node Chain of Thought. Use when Ove says ultrathink or /ultrathink or wants a production-density spec before execution. Do not call prompt-uplift or graph-of-thought. This skill already runs both.
 license: MIT
+user-invocable: true
 metadata:
   type: workflow
   version: "1.3"
@@ -12,7 +13,7 @@ metadata:
   absorbs: ultrathink uplift think prompt-uplift graph-of-thought
   companions: retired
   runtime-fetch: "false"
-  user-invocable: "true"
+  surface: grok-app
 ---
 
 # Ultrathink
