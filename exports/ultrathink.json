@@ -1,0 +1,134 @@
+{
+  "ultrathink_skill": "ultrathink",
+  "timestamp": "2026-09-02T13:30:00+10:00",
+  "query": "Setup SWC Studio Coder like Grok Super Heavy with 4 agents that swarm",
+  "graph": {
+    "nodes": [
+      {
+        "id": "request",
+        "label": "4-agent swarm Coder",
+        "type": "concept"
+      },
+      {
+        "id": "isomorphic",
+        "label": "Same seats as Heavy room",
+        "type": "decision"
+      },
+      {
+        "id": "shared_vm",
+        "label": "Grok Bot computer is one tenant",
+        "type": "risk"
+      },
+      {
+        "id": "one_principal",
+        "label": "studio-coder / Hermes on-box",
+        "type": "control"
+      },
+      {
+        "id": "lead",
+        "label": "SWC Lead plans and synthesizes",
+        "type": "seat"
+      },
+      {
+        "id": "forge",
+        "label": "AethirForge writes app code",
+        "type": "seat"
+      },
+      {
+        "id": "kube",
+        "label": "NexusKube runtime tests CI",
+        "type": "seat"
+      },
+      {
+        "id": "sentinel",
+        "label": "SentinelSec GATE.md veto",
+        "type": "seat"
+      },
+      {
+        "id": "worktrees",
+        "label": "Parallel writes only in worktrees",
+        "type": "control"
+      },
+      {
+        "id": "gate",
+        "label": "Chat LGTM is not a gate",
+        "type": "control"
+      }
+    ],
+    "edges": [
+      {
+        "source": "request",
+        "target": "isomorphic",
+        "relation": "maps_to"
+      },
+      {
+        "source": "isomorphic",
+        "target": "lead",
+        "relation": "includes"
+      },
+      {
+        "source": "isomorphic",
+        "target": "forge",
+        "relation": "includes"
+      },
+      {
+        "source": "isomorphic",
+        "target": "kube",
+        "relation": "includes"
+      },
+      {
+        "source": "isomorphic",
+        "target": "sentinel",
+        "relation": "includes"
+      },
+      {
+        "source": "shared_vm",
+        "target": "one_principal",
+        "relation": "forces"
+      },
+      {
+        "source": "forge",
+        "target": "worktrees",
+        "relation": "requires"
+      },
+      {
+        "source": "kube",
+        "target": "worktrees",
+        "relation": "requires"
+      },
+      {
+        "source": "sentinel",
+        "target": "gate",
+        "relation": "enforces"
+      },
+      {
+        "source": "gate",
+        "target": "lead",
+        "relation": "unblocks"
+      }
+    ],
+    "merging_points": [
+      "one_principal",
+      "gate",
+      "worktrees"
+    ]
+  },
+  "layered_cot": {
+    "layer1": "Ove wants the single Coder upgraded to a Super Heavy 4-swarm.",
+    "layer2": "Four Bots on a shared computer are not four kernels. Isolation must be roles plus worktrees plus a hard veto.",
+    "layer3": "Counter \u2014 swarming every one-liner wastes tokens and collides on files. Depth-1 only. Skip swarm when the change is small.",
+    "layer4": "Ship Bot team + CLI agents + constitution. Rotate the earlier exposed root password out of band. Do not write skills onto the live VPS as root from this chat."
+  },
+  "key_insights": [
+    "Isomorphic roster beats invented names.",
+    "GATE.md is the only merge authority besides Ove.",
+    "Hermes on-box is still the preferred runner."
+  ],
+  "synthesis": "Constrained-allow the swarm. Block multi-root and chat-LGTM-as-approval.",
+  "next_steps": [
+    "Paste the four Bot profiles and standing order",
+    "Copy CLI agents and personas",
+    "Run inventory-only first task",
+    "Finish studio-coder key cutover from ADR-001"
+  ]
+}
