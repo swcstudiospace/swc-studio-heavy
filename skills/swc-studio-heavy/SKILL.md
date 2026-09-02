@@ -1,16 +1,21 @@
 ---
 name: swc-studio-heavy
-description: Four-agent Super Heavy swarm for SWC Studio repos. Use when Ove says swarm, Super Heavy, SWC Lead, AethirForge, NexusKube, SentinelSec together, or /swc-studio-heavy. Orchestrate plan, implement, runtime, and gate across ~/src/repos.
+description: Grok Bot and Hermes four-agent Super Heavy swarm for SWC Studio repos. Not a Grok App slash command. Use when Ove says swarm, Super Heavy, SWC Lead, AethirForge, NexusKube, or SentinelSec together.
 license: MIT
+user-invocable: false
 metadata:
   type: workflow
-  version: "2.1"
+  version: "2.2"
   owner: Ove
   host: swcstudio.space
   workdir: ~/src/repos
+  surface: grok-bot
+  public-command: "false"
 ---
 
 # SWC Super Heavy Coder
+
+Grok Bot / Hermes only. Not listed as a Grok App slash command.
 
 Four seats, one host identity, one merge gate.
 

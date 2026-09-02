@@ -1,15 +1,20 @@
 ---
 name: swc-skill-creator
-description: Creates share-safe Grok skills for SWC Studio using the frozen XML tag schema. Use when Ove says create a skill, self-create skills, author SKILL.md, new studio skill, or freeze a skill name before writing.
+description: Grok Bot and Hermes library for authoring SWC Studio skills. Not a Grok App slash command. Use when Ove says create a skill, self-create skills, author SKILL.md, new studio skill, or freeze a skill name before writing.
 license: MIT
+user-invocable: false
 metadata:
   type: workflow
-  version: "1.0"
+  version: "1.1"
   owner: Ove
   companion: skill-creator
+  surface: grok-bot
+  public-command: "false"
 ---
 
 # SWC Skill Creator
+
+Grok Bot / Hermes only. Not listed as a Grok App slash command.
 
 Author new Grok skills that follow SWC Studio conventions. This skill does not replace bundled `skill-creator`. Use bundled `skill-creator` for generic Grok skills with no SWC contract. Use this skill when the skill is for Ove, SWC Studio, OMP, or must carry the frozen XML tag schema.
 

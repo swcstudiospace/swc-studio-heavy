@@ -1,16 +1,21 @@
 ---
 name: swc-studio-coder
-description: Staff Engineer entrypoint for SWC Studio repos on swcstudio.space. Use when Ove says studio coder, swcstudio, ~/src/repos, or /swc-studio-coder. Routes single-seat work locally and cross-layer work to the Super Heavy swarm.
+description: Grok Bot and Hermes Staff Engineer entrypoint for SWC Studio repos on swcstudio.space. Not a Grok App slash command. Use when Ove says studio coder, swcstudio, or work in the studio repos tree.
 license: MIT
+user-invocable: false
 metadata:
   type: workflow
-  version: "1.2"
+  version: "1.3"
   owner: Ove
   host: swcstudio.space
   workdir: ~/src/repos
+  surface: grok-bot
+  public-command: "false"
 ---
 
 # SWC Studio Coder
+
+Grok Bot / Hermes only. Not listed as a Grok App slash command.
 
 Entrypoint. Classify, then either do the work or invoke the swarm.
 
