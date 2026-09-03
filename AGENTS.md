@@ -1,6 +1,6 @@
 # AGENTS.md — SWC Super Heavy Coder
 
-Place at the repos-tree root (`/srv/repos/AGENTS.md` after migration). Nested repos override.
+Place at the repos-tree root (`/root/src/repos/AGENTS.md` today; `/srv/repos/AGENTS.md` after migration). Nested repos override.
 
 ## Swarm
 
@@ -10,12 +10,14 @@ Chat LGTM is not a gate. SentinelSec VETO is terminal until Ove.
 
 ## Host
 
-- Host: swcstudio.space
-- Principal: studio-coder (never root)
-- Workdir: ~/src/repos or /srv/repos
-- Preferred runner: Hermes on-box
-- Worktrees: `/srv/repos/.worktrees/<lane>-<task>`
-- Swarm files: `/srv/repos/.swarm/<task>/{PLAN,GATE}.md`
+- Host: vps.swcstudio.space
+- Unix user: root
+- Product / Bot / skill name: swc-studio-coder (not a Unix user)
+- Principal: root@vps.swcstudio.space via Hermes-on-box. Grok does not open SSH. Never password. Never sshpass. Never four SSH sessions.
+- Workdir: /root/src/repos (same as ~/src/repos for root). /srv/repos is a future path.
+- Preferred runner: Hermes on-box (already root)
+- Worktrees: `/root/src/repos/.worktrees/<lane>-<task>`
+- Swarm files: `/root/src/repos/.swarm/<task>/{PLAN,GATE}.md`
 
 ## File ownership
 

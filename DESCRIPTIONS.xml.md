@@ -21,3 +21,5 @@ Schema (do not invent extra top-level tags):
 
 `<approval_required>` is HITL to Ove. `<never>` is unconditional.
 First-task inventory text is a chat message, not a profile tag.
+
+Live principal (ADR-003): `root@vps.swcstudio.space` via Hermes-on-box. Product name stays `swc-studio-coder`. Grok does not open SSH. Never password in chat. Never sshpass. Never four SSH sessions. Re-paste Bot profiles from `GROK_BOT_TEAM.md` after this change.

@@ -13,7 +13,9 @@ A verbal LGTM in chat is not a gate. Only `GATE.md` PASS from SentinelSec unbloc
 | Kube | NexusKube | Tests, CI, compose, worktrees, exec path | kubectl mutate, app logic, extra SSH users |
 | Gate | SentinelSec | Threat model + `GATE.md` | Write the patch under review |
 
-Principal on the box: `studio-coder` (Hermes-on-box until migrated). Not four SSH sessions. Not four root identities.
+Principal on the box: `root@vps.swcstudio.space` via Hermes-on-box. Product identity remains `swc-studio-coder`. Not four SSH sessions. Not four host identities.
+
+Grok does not open SSH from chat. Laptop Plane B is `ssh root@vps.swcstudio.space` with the ed25519 key from the `vps-swcstudio` skill. Never password. Never sshpass.
 
 ## Protocol
 
@@ -32,6 +34,6 @@ Skip the swarm when the change is a single file or a one-line fix. Swarm costs t
 
 Default deny.
 
-Never (any seat): password SSH, root SSH, sshpass, expect, `git push --force` to main/master, commit `.env`/keys/mnemonics, edit sshd/sudoers/systemd/firewall, kubectl apply/delete/scale, package publish, production deploy.
+Never (any seat): password in chat, sshpass, expect, opening an SSH channel from Grok, `git push --force` to main/master, commit `.env`/keys/mnemonics, edit sshd/sudoers/systemd/firewall, kubectl apply/delete/scale, package publish, production deploy.
 
 Override SentinelSec VETO: Ove only.

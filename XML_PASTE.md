@@ -17,6 +17,8 @@ Rules: lists use `<item>`. No secrets in any tag. First tasks are messages, not 
 
 Grok Bot Description is plain text. Tags are stored as text. Each Bot block is ~2.0–2.3k characters.
 
-## Security contract (unchanged)
+## Security contract
 
-Chat LGTM is not a gate. Only GATE.md PASS from SentinelSec unblocks merge. VETO is terminal until Ove. One principal: studio-coder. Never password. Never root. Never four SSH sessions.
+Chat LGTM is not a gate. Only GATE.md PASS from SentinelSec unblocks merge. VETO is terminal until Ove.
+
+One host identity: `root@vps.swcstudio.space` via Hermes-on-box. Product / Bot / skill name stays `swc-studio-coder` (not a Unix user). Never password. Never sshpass. Never four SSH sessions. Grok does not open SSH. Never paste a password into chat.

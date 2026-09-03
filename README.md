@@ -1,17 +1,8 @@
 # SWC Super Heavy Coder
 
-Four-agent swarm pack. Same seats as the Heavy room. One host identity.
+Four-agent swarm pack. Same seats as the Heavy room. One host identity: root@vps.swcstudio.space via Hermes-on-box. Product name stays swc-studio-coder.
 
 Descriptions use a locked XML tag set. See `SCHEMA.md`. Paste the XML blocks from `GROK_BOT_TEAM.md` into Bot profiles as-is.
-
-## Grok App vs Grok Bot
-
-| Surface | Public command |
-|---|---|
-| Grok App slash picker | `/ultrathink` only |
-| Grok Bot / Hermes | `swc-studio-coder`, `swc-studio-heavy`, `swc-skill-creator` |
-
-`prompt-uplift` and `graph-of-thought` are retired libraries. Both pipelines live inside `skills/ultrathink` Stages 1-3. Do not invoke them.
 
 ## Install
 
@@ -32,25 +23,16 @@ cp skills/swc-studio-heavy/SKILL.md ~/.grok/skills/swc-studio-heavy/
 cp skills/swc-studio-coder/SKILL.md ~/.grok/skills/swc-studio-coder/
 ```
 
-Bot / CLI invoke by name, not as Grok App slash commands:
+Invoke:
 
 ```
-swc-studio-heavy inventory ~/src/repos. no mutations.
-swc-studio-coder fix the failing test in <repo>
-```
-
-### Grok App
-
-Install only `skills/ultrathink`. Invoke:
-
-```
-/ultrathink <task>
+/swc-studio-heavy inventory /root/src/repos. no mutations.
+/swc-studio-coder fix the failing test in <repo>
 ```
 
 ## Do not
 
 - Put passwords in any profile
-- Open four root SSH sessions
+- Open four SSH sessions from Grok, or paste a password into chat
 - Treat four Bots as four security tenants
 - Write these skills onto `/root/.hermes/skills` as root from chat without an explicit Ove order
-- Publish SWC skills as Grok App slash commands
